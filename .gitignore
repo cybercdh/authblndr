@@ -1,0 +1,36 @@
+# Binary
+authblndr
+authblndr.exe
+
+# Build artifacts
+*.o
+*.a
+*.so
+
+# Go workspace
+go.work
+go.work.sum
+
+# Test cache
+*.test
+*.out
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Tool config (local overrides)
+.claude/settings.local.json
