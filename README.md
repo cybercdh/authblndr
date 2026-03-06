@@ -11,13 +11,13 @@ Scans a list of hosts/endpoints for broken authentication — specifically, serv
 ## Install
 
 ```sh
-go install github.com/yourusername/authblndr@latest
+go install github.com/cybercdh/authblndr@latest
 ```
 
 Or build from source:
 
 ```sh
-git clone https://github.com/yourusername/authblndr
+git clone https://github.com/cybercdh/authblndr
 cd authblndr
 go build -o authblndr .
 ```
