@@ -15,13 +15,13 @@ import (
 const fakeAuthHeader = "foo"
 
 type Result struct {
-	Subdomain    string
-	URL          string
-	BaseStatus   int
-	AuthStatus   int
+	Subdomain        string
+	URL              string
+	BaseStatus       int
+	AuthStatus       int
 	RedirectLocation string
-	Vulnerable   bool
-	Error        string
+	Vulnerable       bool
+	Error            string
 }
 
 // noRedirectClient returns an HTTP client that never follows redirects.
@@ -200,6 +200,11 @@ Examples:
 `)
 	}
 	flag.Parse()
+
+	if *concurrency < 1 {
+		fmt.Fprintf(os.Stderr, "-c must be at least 1 (got %d)\n", *concurrency)
+		os.Exit(2)
+	}
 
 	client := noRedirectClient(*timeout)
 
